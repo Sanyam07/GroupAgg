@@ -16,3 +16,5 @@ Just compare models on churn_test.csv and churn_test_big_cols.csv choosing the t
 ### Will it not overfit ?
 This is a tricky area. (Discussed in GitHub above) as we are not doing aggregation for train/test separately, instead doing it all at once. For this case, I ran the aggregations "before" splitting up to train/test and it DID NOT overfit obviously. Will confirm more details on how the aggregations work independently on training/test.
 
+Either case, the minimum thing would be do "batch scoring" since the row aggregates are derived from groups it belongs to, which may be ok.
+
