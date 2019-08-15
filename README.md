@@ -1,9 +1,9 @@
 # AutoAggregator
 ### Author: Karthik Guruswamy
 
-This is a notebook for creating additional columns/features using 'group aggregates'. Groups are identified through categorical variables, with aggregates such as min, max, avg, stddev, median etc., performed on numeric columns. 
+There is a notebook code here, for creating additional columns/features using 'group aggregates'. Groups are identified through categorical variables, with aggregates such as min, max, avg, stddev, median etc., performed on numeric columns. 
 
-Currently I dont have code to "detect hierarchy" and I tried cats as independent, but permute on them with some limits set in the code on how many level deep we have to go - otherwise we are going to end up with 1000s of columns.
+Currently I dont have code to "detect natural hierarchy" as I'm using cats as somewhat independent vars, but permute on them with some limits set in the code on how many level deep we have to go - otherwise we are going to end up with 1000s of columns.
 
 Any help to make this code, smarter and better is appreciated! Once we have "full frame" support in BYOR, this could be moved there is the plan. This is the github issue that Im tracking.
 
