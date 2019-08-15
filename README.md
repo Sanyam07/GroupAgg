@@ -1,7 +1,7 @@
 # GroupAgg
 ### Author: Karthik Guruswamy
 
-There is a notebook code here, for creating additional columns/features using 'group aggregates'. Groups are identified through categorical variables, with aggregates such as min, max, avg, stddev, median etc., performed on numeric columns. 
+There is a notebook code here, for creating additional columns/features using 'group aggregates'. Groups are identified through categorical variables, with aggregates such as min, max, avg, stddev, median etc., performed on numeric columns at different 'group levels'. 
 
 Currently I dont have code to "detect natural hierarchy" as I'm using cats as somewhat independent vars, but permute on them with some limits set in the code on how many level deep we have to go - otherwise we are going to end up with 1000s of columns.
 
