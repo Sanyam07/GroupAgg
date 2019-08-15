@@ -11,7 +11,7 @@ https://github.com/h2oai/h2oai/issues/9065
 
 #### So how do we know that creating aggregation columns actually works ?
 
-Just compare models on churn_train/churn_test.csv and churn_train_big_cols.csv/churn_test_big_cols.csv choosing the target col as 'is_churn'. You can see accuracy shooting up quite a bit for *big_cols* data sets - tks to the aggregation cols (seen in feature importance) - that's how I know it works :)
+Just compare models on churn_train/churn_test.csv and churn_train_big_cols.csv/churn_test_big_cols.csv choosing the target col as 'is_churn'. If the settings are high enough, DAI works through >> features in *big_cols* data set to get better accuracy. For small settings, basic cols w/o aggregation yields better results. I will post results on "highly imbalanced" data set soon - because that's where the action is.
 
 ### Will it not overfit ?
 This is a tricky area. (Discussed in GitHub above) as we are not doing aggregation for train/test separately, instead doing it all at once. For this case, I ran the aggregations "before" splitting up to train/test and it DID NOT overfit obviously. Will confirm more details on how the aggregations work independently on training/test.
