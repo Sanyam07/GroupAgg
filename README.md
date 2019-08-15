@@ -13,3 +13,6 @@ https://github.com/h2oai/h2oai/issues/9065
 
 Just compare models on churn_test.csv and churn_test_big_cols.csv choosing the target col as 'is_churn'. You can see accuracy shooting quite a bit tks to the aggregation cols (seen in feature importance) - that's how I know it works :)
 
+### Will it not overfit ?
+This is a tricky area. (Discussed in GitHub above) as we are not doing aggregation for train/test separately, instead doing it all at once. For this case, I ran the aggregations "before" splitting up to train/test and it DID NOT overfit obviously. So when we do batch scoring, which is the only way to detect fraud etc., assume that we are going to run these aggregations first en-masse and then scoring the rows, to identify transaction fraud etc.,
+
